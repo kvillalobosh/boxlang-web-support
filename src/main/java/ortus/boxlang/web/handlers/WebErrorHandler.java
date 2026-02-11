@@ -41,6 +41,7 @@ import ortus.boxlang.runtime.util.FRTransService;
 import ortus.boxlang.web.context.WebRequestBoxContext;
 import ortus.boxlang.web.exchange.IBoxHTTPExchange;
 
+// Trying to commit
 /**
  * I handle default errors for a web request
  * TODO: allow custom error template to be configured
@@ -413,11 +414,6 @@ public class WebErrorHandler {
 		return s.replace( "<", "&lt;" ).replace( ">", "&gt;" );
 	}
 
-	/**
-	 * Convert actual line breaks to <br>
-	 * and spaces to &nbsp;
-	 * Only call this after escaping HTML
-	 */
 	private static String preserveWhitespace( String s ) {
 		if ( s == null ) {
 			return "";
@@ -434,6 +430,7 @@ public class WebErrorHandler {
 		// Test 2: Can we replace placeholders?
 		String result = loadTemplate().replace( "{{ERROR_MESSAGE}}", "This is a test error message." );
 		System.out.println( "After replacing place holders: " + result );
+		System.out.println( "Tests completed." );
 
 	}
 }
